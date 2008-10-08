@@ -1,0 +1,13 @@
+--- origsrc/cxfe-0.9.2/cxfe.c	2007-07-25 13:40:59.000000000 -0500
++++ src/cxfe-0.9.2/cxfe.c	2008-10-07 22:09:29.878774600 -0500
+@@ -1038,8 +1038,8 @@
+   char              configfile[2048];
+   x11_visual_t      vis;
+   double            res_h, res_v;
+-  char             *vo_driver = "xv";
+-  char             *ao_driver = "auto";
++  char             *vo_driver = "xshm";
++  char             *ao_driver = "oss";
+   char             *mrl[1000];
+   char             *cda_param = "input.cdda_device";
+   char		   *dvd_param = "input.dvd_device";

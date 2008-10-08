@@ -1,0 +1,16 @@
+DESCRIPTION="Xine CLI"
+HOMEPAGE="http://people.iola.dk/anders/cxfe/"
+SRC_URI="http://people.iola.dk/anders/cxfe/${P}.tar.bz2"
+PATCH_URI="0.9.2-default-drivers.patch
+           0.9.2-tcgetattr.patch"
+
+src_compile() {
+	cd ${B}
+	cygconf
+	cygmake CPPFLAGS="-I." LDLIBS='$(LDFLAGS)'
+}
+
+src_install() {
+	cd ${B}
+	dobin ${PN}.exe
+}
